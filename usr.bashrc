@@ -9,7 +9,8 @@ PATH="$PATH:$HOME/.local/bin:."
 alias update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt -y autoremove'
 
 alias pyvenv='python3.8 -m venv dev3.8 && source ~/dev3.8/bin/activate'
-#and use 'deactivate' to exit the venv
+#and use 'deactivate' to exit the venv. 
+#Requires the PY_DEPS and update_deps as defined below
 
 #box-level dependencies, aka what do you need to install to get the box to work
 PY_DEPS='python3.8 python3.8-venv'
