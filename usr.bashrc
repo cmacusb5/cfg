@@ -53,6 +53,11 @@ alias cowsays='echo m0o!'
 
 #source identity variables
 source ~/identity
+# This file should define GITHUB_TOKEN (should be a Personal access token. 
+# See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+# as well as running 'git config --global user.name <username>' and 
+# 'git config --global user.email <email>'. It should also define JFROG_API_KEY
+# and JFROG_USERNAME. A simple "key='value'" directive should suffice.
 
 #installation command, so you don't have to `source` this file every time.
 install_cfg_file() { echo "source ~/.cfg/usr.bashrc" >> .bashrc; ln ~/.cfg/vimrc ~/.vimrc; }
