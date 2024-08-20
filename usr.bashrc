@@ -61,7 +61,8 @@ alias cowsays='echo m0o!'
 
 #source identity variables
 source ~/.id
-# This file should define (A simple "key='value'" directive should suffice unless you need to run something):
+# This file should define (A simple "key='value'" directive should suffice unless 
+# you need to run something):
     # GITHUB_TOKEN (should be a Personal access token. 
         # See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
     # running 'git config --global user.name <username>'
