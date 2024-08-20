@@ -63,12 +63,12 @@ alias cowsays='echo m0o!'
 source ~/.id
 # This file should define (A simple "key='value'" directive should suffice unless 
 # you need to run something):
-    # GITHUB_TOKEN (should be a Personal access token. 
+    # GITHUB_TOKEN (should be a Personal access token) 
         # See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
     # running 'git config --global user.name <username>'
-    # running 'git config --global user.email <email>'. 
+    # running 'git config --global user.email <email>' 
     # JFROG_API_KEY
-    # JFROG_USERNAME.
+    # JFROG_USERNAME
 
 #installation command, so you don't have to `source` this file every time.
 install_cfg_file() { echo "source ~/.cfg/usr.bashrc" >> .bashrc; ln ~/.cfg/vimrc ~/.vimrc; }
