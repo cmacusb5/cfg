@@ -35,7 +35,7 @@ source ~/.cfg/python-venv
 BOX_DEPS="git wget ca-certificates g++ gdb make rsync zip docker ninja-build"
 update_deps() { 
     sudo apt-get update && \
-    sudo apt-get -y install $BOX_DEPS && \
+    sudo apt-get -y install "$BOX_DEPS" && \
     sudo apt-get -y upgrade && \
     install_python_3_8 && \
     sudo apt-get -y autoremove;
@@ -62,7 +62,13 @@ source ~/.id
     # DEV_BOARD_IP
 
 #installation command, so you don't have to `source` this file every time.
-install_cfg_file() { echo "source ~/.cfg/usr.bashrc" >> .bashrc; ln ~/.cfg/vimrc ~/.vimrc; }
+install_cfg_file() { 
+    echo "source ~/.cfg/usr.bashrc" >> .bashrc && \
+    ln ~/.cfg/vimrc ~/.vimrc;
+    return $?; 
+}
 
-#installation of devboard.profile
+# installation of devboard.profile
 alias push_devboard_profile='scp ~/.cfg/devboard.profile root@$DEV_BOARD_IP:~/.profile'
+
+alias configure_pwdless_ssh='ssh-keygen -t rsa && db mkdir -p ~/.ssh && ssh-copy-id root@$DEV_BOARD_IP'
