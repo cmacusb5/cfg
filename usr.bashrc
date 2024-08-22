@@ -63,3 +63,6 @@ source ~/.id
 
 #installation command, so you don't have to `source` this file every time.
 install_cfg_file() { echo "source ~/.cfg/usr.bashrc" >> .bashrc; ln ~/.cfg/vimrc ~/.vimrc; }
+
+#installation of devboard.profile
+alias push_devboard_profile='scp ~/.cfg/devboard.profile root@$DEV_BOARD_IP:~/.profile'
