@@ -25,33 +25,19 @@ gcp() { git commit "$@" && git push; return $?;}
 alias ga='git add'
 alias godev='cs ~/Documents/bct-embedded-linux && gs'
 alias gocfg='cs ~/.cfg && gs'
-alias pyvenv='python3.8 -m venv ~/dev3.8 && source ~/dev3.8/bin/activate'
-#and use 'deactivate' to exit the venv. 
-#Requires the PY_DEPS and update_deps as defined below
 
+source ~/.cfg/python-venv
 #box-level dependencies, aka what do you need to install to get the box to work
-PY_DEPS='python3.8 python3.8-venv'
-BOX_DEPS="$PY_DEPS git wget ca-certificates g++ gdb make  rsync zip docker ninja-build"
+BOX_DEPS="git wget ca-certificates g++ gdb make rsync zip docker ninja-build"
 update_deps() { 
-    sudo add-apt-repository -y ppa:deadsnakes/ppa && \
     sudo apt-get update && \
     sudo apt-get -y install $BOX_DEPS && \
     sudo apt-get -y upgrade && \
-    sudo apt-get -y autoremove && \
-    pyvenv && \
-    pip install pytest && \
-    pip install -r ~/Documents/bct-embedded-linux/Common/Automation/Pytest/requirements.txt 
-    deactivate;
-    return $?;
+    install_python_3_8 && \
+    sudo apt-get -y autoremove;
+    return $?
     }
 
-cleanup_python_3.8() {
-    sudo apt-get remove -y $PY_DEPS && \
-    sudo add-apt-repository ppa:deadsnakes/ppa --remove -y && \
-    sudo apt-get autoremove -y;
-    rm -rf ~/dev3.8
-    return $?;
-}
 
 # quick re-sourcing of the default bashrc env setup, including this file (if it's hooked up)
 alias resource='source ~/.bashrc'
