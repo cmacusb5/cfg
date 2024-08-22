@@ -27,7 +27,7 @@ alias godev='cs ~/Documents/bct-embedded-linux && gs'
 alias gocfg='cs ~/.cfg && gs'
 
 #easy shortcuts for dev board work. DEV_BOARD_IP should be defined in ~/.id
-alias db='ssh root@$DEV_BOARD_IP'
+alias devboard='ssh root@$DEV_BOARD_IP'
 alias db='devboard'
 
 source ~/.cfg/python-venv
