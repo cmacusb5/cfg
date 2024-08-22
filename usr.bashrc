@@ -26,6 +26,10 @@ alias ga='git add'
 alias godev='cs ~/Documents/bct-embedded-linux && gs'
 alias gocfg='cs ~/.cfg && gs'
 
+#easy shortcuts for dev board work. DEV_BOARD_IP should be defined in ~/.id
+devboard() { ssh root@$DEV_BOARD_IP; return $?; }
+alias db='devboard'
+
 source ~/.cfg/python-venv
 #box-level dependencies, aka what do you need to install to get the box to work
 BOX_DEPS="git wget ca-certificates g++ gdb make rsync zip docker ninja-build"
@@ -55,6 +59,7 @@ source ~/.id
     # running 'git config --global user.email <email>' 
     # JFROG_API_KEY
     # JFROG_USERNAME
+    # DEV_BOARD_IP
 
 #installation command, so you don't have to `source` this file every time.
 install_cfg_file() { echo "source ~/.cfg/usr.bashrc" >> .bashrc; ln ~/.cfg/vimrc ~/.vimrc; }
