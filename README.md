@@ -2,7 +2,7 @@
 
 Contains configuration items for bash and other cli utilities (like vim)
 
-# contents
+# Contents
 - a vimrc file, which sets up vim how I like it. YMMV
 - a python-venv file, which sets up a python virtual environment for python3.8
 - a devboard.profile, which (when installed on your dev board) configures the default Bourne shell to have some cli shortcuts/accelerators
