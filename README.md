@@ -21,12 +21,12 @@ push_devboard_profile
 ```
 
 # .id file
-- contains 
+contains definitions in the below example
 ```bash
 GITHUB_TOKEN="blah"
 ```
--style directives for:
-    - GITHUB_TOKEN
-    - JFROG_API_KEY
-    - JFROG_USERNAME
-    - DEV_BOARD_IP
+for:
+- GITHUB_TOKEN
+- JFROG_API_KEY
+- JFROG_USERNAME
+- DEV_BOARD_IP
