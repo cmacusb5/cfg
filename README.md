@@ -30,3 +30,5 @@ for:
 - JFROG_API_KEY
 - JFROG_USERNAME
 - DEV_BOARD_IP
+- directive to run:
+`git config --global` 
