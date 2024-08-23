@@ -26,7 +26,7 @@ contains definitions in the below example
 GITHUB_TOKEN="blah"
 ```
 for:
-- GITHUB_TOKEN (see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+- GITHUB_TOKEN (see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 - JFROG_API_KEY
 - JFROG_USERNAME
 - DEV_BOARD_IP
