@@ -21,14 +21,10 @@ Contains configuration items for bash and other cli utilities (like vim)
 
 
 # .id file
-contains definitions in the below example
-```bash
-GITHUB_TOKEN="blah"
-```
-for:
-- GITHUB_TOKEN (see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-- JFROG_API_KEY
-- JFROG_USERNAME
-- DEV_BOARD_IP
+contains identity definitions:
+- `export GITHUB_TOKEN='token here'` (see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+- `export JFROG_API_KEY='key here'`
+- `export JFROG_USERNAME='username here'`
+- `DEV_BOARD_IP='ip address here'`
 - directive to run: `git config --global user.name <username>` 
 - directive to run: `git config --global user.email <email>` 

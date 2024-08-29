@@ -51,14 +51,13 @@ alias cowsays='echo m0o!'
 
 #source identity variables
 source ~/.id
-# This file should define (A simple "key='value'" directive should suffice unless 
-# you need to run something):
-    # GITHUB_TOKEN (should be a Personal access token) 
+# This file should include:
+    # 'export GITHUB_TOKEN="token here"' (should be a Personal access token) 
         # See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
     # running 'git config --global user.name <username>'
     # running 'git config --global user.email <email>' 
-    # JFROG_API_KEY
-    # JFROG_USERNAME
+    # 'export JFROG_API_KEY="key here"'
+    # 'export JFROG_USERNAME'
     # DEV_BOARD_IP
 
 #installation command, so you don't have to `source` this file every time.
