@@ -35,7 +35,7 @@ source ~/.cfg/python-venv
 BOX_DEPS="git wget ca-certificates g++ gdb make rsync zip docker ninja-build"
 update_deps() { 
     sudo apt-get update && \
-    sudo apt-get -y install "$BOX_DEPS" && \
+    sudo apt-get -y install $BOX_DEPS && \
     sudo apt-get -y upgrade && \
     install_python_3_8 && \
     sudo apt-get -y autoremove;

@@ -12,7 +12,7 @@ Contains configuration items for bash and other cli utilities (like vim)
 # Setup instructions:
 - create ~/.id as defined below
 - clone bct-embedded-linux to ~/Documents/bct-embedded-linux
-    - (requires pre-installing git and running `source ~/.id`)
+   - (requires pre-installing git and running `source ~/.id`)
 - clone this repo to ~/.cfg
 - run: `source ~/.cfg/usr.bashrc`
 - run: `update_deps && install_cfg_file`
@@ -28,3 +28,10 @@ contains identity definitions:
 - `DEV_BOARD_IP='ip address here'`
 - directive to run: `git config --global user.name <username>` 
 - directive to run: `git config --global user.email <email>` 
+
+# Docker setup for local device builds on WSL
+- update_deps to install wsl-side dependencies (if not already done)
+- Follow https://docs.docker.com/desktop/wsl/ to set up docker with WSL integration. 
+   - for installing Docker Desktop with the Thycotic Permission Access Manager you will need to use the "TBCT - Request Run as Administrator" option in Windows
+   - Make sure to enable enable Docker Desktop > Settings > Resources > WSL Integration.
+   - Make sure to execute (from windows cmd or powershell) `wsl --set-default Ubuntu`
