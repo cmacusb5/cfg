@@ -23,8 +23,14 @@ alias gs='git status'
 alias gc='git commit'
 gcp() { git commit "$@" && git push; return $?;}
 alias ga='git add'
-alias godev='cs ~/Documents/bct-embedded-linux && gs'
 alias gocfg='cs ~/.cfg && gs'
+godev() { 
+   if [ $# -ne 0 ]; then
+      cs ~/Documents/bct-embedded-linux/"$1" && gs;
+   else
+      cs ~/Documents/bct-embedded-linux && gs;
+   fi
+}
 
 #easy shortcuts for dev board work. DEV_BOARD_IP should be defined in ~/.id
 alias devboard='ssh root@$DEV_BOARD_IP'
