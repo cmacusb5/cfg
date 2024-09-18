@@ -10,6 +10,7 @@ alias ll='ls -l'
 
 # some 
 soft_reboot() { 
-    redis-cli -s /data/share/redis.sock publish ResetDeviceMessage '{"powerOff":false}'; 
+   redis-cli -s /data/share/redis.sock publish ResetDeviceMessage '{"powerOff":false}'; 
+   return $?;
 }
 alias ifconfig='lxc-ls -f'

@@ -41,13 +41,13 @@ source ~/.cfg/python-venv
 #box-level dependencies, aka what do you need to install to get the box to work
 BOX_DEPS="git wget ca-certificates g++ gdb make rsync zip docker ninja-build"
 update_deps() { 
-    sudo apt-get update && \
-    sudo apt-get -y install $BOX_DEPS && \
-    sudo apt-get -y upgrade && \
-    install_python_3_8 && \
-    sudo apt-get -y autoremove;
-    return $?
-    }
+   sudo apt-get update && \
+   sudo apt-get -y install $BOX_DEPS && \
+   sudo apt-get -y upgrade && \
+   install_python_3_8 && \
+   sudo apt-get -y autoremove;
+   return $?
+   }
 
 
 # quick re-sourcing of the default bashrc env setup, including this file (if it's hooked up)
@@ -69,9 +69,9 @@ source ~/.id
 
 #installation command, so you don't have to `source` this file every time.
 install_cfg_file() { 
-    echo "source ~/.cfg/usr.bashrc" >> .bashrc && \
-    ln ~/.cfg/vimrc ~/.vimrc;
-    return $?; 
+   echo "source ~/.cfg/usr.bashrc" >> .bashrc && \
+   ln ~/.cfg/vimrc ~/.vimrc;
+   return $?; 
 }
 
 # installation of devboard.profile
