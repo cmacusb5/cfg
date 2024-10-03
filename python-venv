@@ -4,7 +4,7 @@
 # python maps to python3.8 and pip maps to python3.8_pip
 # To install this functionality, source this file and run install_python_3_8.
 # Prerequisites for installing:
-    # - bct-embedded-linex cloned to ~/Documents/bct-embedded-linux
+    # - bct-embedded-linux cloned to ~/Documents/bct-embedded-linux
 alias pyvenv='python3.8 -m venv ~/dev3.8 && source ~/dev3.8/bin/activate'
 # use 'deactivate' to exit the venv. 
 # Requires to run install_python_3_8 as defined below
