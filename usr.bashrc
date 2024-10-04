@@ -24,12 +24,14 @@ alias gc='git commit'
 gcp() { git commit "$@" && git push; return $?;}
 gnewbranch() { git checkout -b "$1" && git push --set-upstream origin "$1"; }
 alias ga='git add'
-alias gocfg='cs ~/.cfg && gs'
+go() { cs $1 && gs; }
+alias gocfg='go ~/.cfg'
+alias gomaster='go ~/Documents/bct-embedded-linux-master'
 godev() { 
    if [ $# -ne 0 ]; then
-      cs ~/Documents/bct-embedded-linux/"$1" && gs;
+      go ~/Documents/bct-embedded-linux/"$1";
    else
-      cs ~/Documents/bct-embedded-linux && gs;
+      go ~/Documents/bct-embedded-linux;
    fi
 }
 
