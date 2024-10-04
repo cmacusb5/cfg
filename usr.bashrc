@@ -66,8 +66,8 @@ source ~/.id
     # running 'git config --global user.name <username>'
     # running 'git config --global user.email <email>' 
     # 'export JFROG_API_KEY="key here"'
-    # 'export JFROG_USERNAME'
-    # DEV_BOARD_IP
+    # 'export JFROG_USERNAME="Username here"'
+    # DEV_BOARD_IP="#.#.#.#"
 
 #installation command, so you don't have to `source` this file every time.
 install_cfg_file() { 
