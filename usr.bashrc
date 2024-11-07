@@ -21,6 +21,7 @@ alias ts='~/tempscript.sh'
 alias gp='git push'
 alias gs='git status'
 alias gc='git commit'
+alias gco='git checkout'
 gcp() { git commit "$@" && git push; return $?;}
 gnewbranch() { git checkout -b "$1" && git push --set-upstream origin "$1"; }
 alias ga='git add'
