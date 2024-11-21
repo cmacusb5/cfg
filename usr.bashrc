@@ -80,4 +80,6 @@ install_cfg_file() {
 # installation of devboard.profile
 alias push_devboard_profile='scp ~/.cfg/devboard.profile root@$DEV_BOARD_IP:~/.profile && scp ~/.cfg/vimrc root@$DEV_BOARD_IP:~/.vimrc'
 
-alias configure_devboard_pwdless_ssh='ssh-keygen -t rsa && db mkdir -p ~/.ssh && ssh-copy-id root@$DEV_BOARD_IP'
+alias configure_devboard_pwdless_ssh='ssh-keygen -t rsa; db mkdir -p ~/.ssh && ssh-copy-id root@$DEV_BOARD_IP'
+
+alias setup_devboard='configure_devboard_pwdless_ssh && push_devboard_profile'
