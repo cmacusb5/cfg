@@ -5,21 +5,22 @@
 # To install this functionality, source this file and run install_python_3_8.
 # Prerequisites for installing:
     # - bct-embedded-linux cloned to ~/Documents/bct-embedded-linux
-VENV_PATH="~/dev3.8"
+VENV_PATH="$HOME/dev3.8"
 VENV_LINK_PATH="/sbin/python"
-alias pyvenv='source $PYTHON_VENV/bin/activate'
+alias pyvenv='source $VENV_PATH/bin/activate'
 # use 'deactivate' to exit the venv. 
 # Requires to run install_python_3_8 as defined below
 
 PY_DEPS='python3.8 python3.8-venv'
 PY_PPA='ppa:deadsnakes/ppa'
 install_python_3_8() {
-   sudo add-apt-repository -y $PY_PPA && \
+   sudo add-apt-repository -y "$PY_PPA" && \
    sudo apt-get update && \
    sudo apt-get -y install $PY_DEPS && \
    sudo apt-get -y autoremove && \
-   python3.8 -m venv "$VENV_PATH"
-   ln "$VENV_PATH/bin/python" "$VENV_LINK_PATH"
+   echo "Installing venv at $VENV_PATH" && \
+   python3.8 -m venv "$VENV_PATH" && \
+   sudo ln -s "$VENV_PATH/bin/python" "$VENV_LINK_PATH" && \
    pyvenv && \
    pip install pytest && \
    pip install -r ~/Documents/bct-embedded-linux/Common/Automation/Pytest/requirements.txt 
@@ -28,8 +29,8 @@ install_python_3_8() {
 }
 
 cleanup_python_3_8() {
-   sudo apt-get remove -y $PY_DEPS && \
-   sudo add-apt-repository $PY_PPA --remove -y && \
+   sudo apt-get remove -y "$PY_DEPS" && \
+   sudo add-apt-repository "$PY_PPA" --remove -y && \
    sudo apt-get autoremove -y;
    sudo rm "$VENV_LINK_PATH"
    rm -rf "$VENV_PATH"
